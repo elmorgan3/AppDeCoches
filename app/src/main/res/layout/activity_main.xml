@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -33,14 +34,14 @@
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button2" />
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button" />
             </TableRow>
 
@@ -51,14 +52,14 @@
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button4" />
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button3" />
             </TableRow>
 
@@ -69,14 +70,14 @@
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button6" />
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button5" />
             </TableRow>
 
@@ -87,14 +88,14 @@
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button8" />
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button7" />
             </TableRow>
 
@@ -105,16 +106,15 @@
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:id="@+id/button17" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button10" />
 
                 <Button
                     android:text="Button"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:id="@+id/button16"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button9" />
             </TableRow>
 
         </TableLayout>
