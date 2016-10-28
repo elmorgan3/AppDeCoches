@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main2"
     android:layout_width="match_parent"
@@ -10,30 +11,106 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.morgan.appdecoches.MainActivity2">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <TextView
-            android:text="Información General"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:gravity="center"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18sp" />
+            android:layout_height="match_parent"
+            android:gravity="center">
 
-        <TextView
-            android:text="TextView"
+            <TextView
+                android:text="Información general"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textSize="24sp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/background_dark" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewNombre" />
+            android:layout_height="match_parent" >
 
-    </LinearLayout>
+            <TextView
+                android:text="Marca: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMarca"
+                android:textSize="18sp"
+                android:textColor="@android:color/background_dark"
+                android:layout_marginTop="30dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Fundador:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewFundador"
+                android:textSize="18sp"
+                android:textColor="@android:color/background_dark"
+                android:layout_marginTop="30dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Fundación: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewFundacion"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/background_dark" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewWeb"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/background_dark"
+                android:text="Sitio web: " />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Modelo: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewModelo"
+                android:textSize="18sp"
+                android:textColor="@android:color/background_dark"
+                android:layout_marginTop="30dp" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/Bugatti_Veyron"
+        android:id="@+id/imageViewCoche"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
