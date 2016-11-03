@@ -107,18 +107,6 @@
         android:layout_marginTop="15dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewWeb"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:text="Sitio web: "
-        android:paddingTop="20dp"
-        android:layout_below="@+id/imageViewCoche"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
         android:text="@string/link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -147,7 +135,20 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bugatti_veyron"
         android:id="@+id/imageViewCoche"
+        android:layout_marginTop="11dp"
         android:layout_below="@+id/editTextModelo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewWeb"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:text="Sitio web: "
+        android:paddingTop="20dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

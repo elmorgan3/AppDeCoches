@@ -227,6 +227,38 @@ public class MainActivity2 extends AppCompatActivity {
                 break;
 
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "mclaren":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("McLaren");
+                editTextFundador.setText("Ron Dennis");
+                editTextFundacion.setText("1989");
+                editTextModelo.setText("P1");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.mclaren_p1);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://cars.mclaren.com/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cars.mclaren.com/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case "morgan":
 
                 //Rellenamos los editText que corresponde con este caso
@@ -257,6 +289,72 @@ public class MainActivity2 extends AppCompatActivity {
                 });
 
                 break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "subaru":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Subaru");
+                editTextFundador.setText("Chikuhei Nakajima");
+                editTextFundacion.setText("1953");
+                editTextModelo.setText("BRZ");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.subaru_brz);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://www.subaru.jp/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.subaru.jp/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "tesla":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Tesla");
+                editTextFundador.setText("Elon Musk");
+                editTextFundacion.setText("2003");
+                editTextModelo.setText("Roadster");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.tesla_roadster);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("https://www.tesla.com/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.tesla.com/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+
 
 
         }

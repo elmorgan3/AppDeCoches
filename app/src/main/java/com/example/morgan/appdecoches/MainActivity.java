@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity  {
 
     //Declaro todas las variables de tipo ImageBotton con los respectivos nombres
-    ImageButton btnBentley, btnBuagatti, btnCadillac, btnChevrolet, btnDodge,  btnLexus, btnMorgan, btnSmart, btnSubaru, btnTesla;
+    ImageButton btnBentley, btnBuagatti, btnCadillac, btnChevrolet, btnDodge,  btnLexus, btnMcLaren, btnMorgan, btnSubaru, btnTesla;
 
     //Creamos el bundle para meter dentro que boton han pulsado
     Bundle b = new Bundle();
@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity  {
         btnChevrolet = (ImageButton) findViewById(R.id.imageButtonChevrolet);
         btnDodge = (ImageButton) findViewById(R.id.imageButtonDodge);
         btnLexus = (ImageButton) findViewById(R.id.imageButtonLexus);
+        btnMcLaren = (ImageButton) findViewById(R.id.imageButtonMcLaren);
         btnMorgan = (ImageButton) findViewById(R.id.imageButtonMorgan);
         btnSubaru = (ImageButton) findViewById(R.id.imageButtonSubaru);
-        btnSmart = (ImageButton) findViewById(R.id.imageButtonSmart);
         btnTesla = (ImageButton) findViewById(R.id.imageButtonTesla);
     }
 
@@ -110,10 +110,10 @@ public class MainActivity extends AppCompatActivity  {
         enviar(b);
     }
 
-    public void btnMorgan(View v)
+    public void btnMcLaren(View v)
     {
         //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
-        coche = "morgan";
+        coche = "mclaren";
 
         //Metemos en un cajon del bundle un dato, le pones de id "coche"
         //y metemos la variable que contiene que coche han elegido
@@ -122,10 +122,10 @@ public class MainActivity extends AppCompatActivity  {
         enviar(b);
     }
 
-    public void btnSmart(View v)
+    public void btnMorgan(View v)
     {
         //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
-        coche = "smart";
+        coche = "morgan";
 
         //Metemos en un cajon del bundle un dato, le pones de id "coche"
         //y metemos la variable que contiene que coche han elegido
