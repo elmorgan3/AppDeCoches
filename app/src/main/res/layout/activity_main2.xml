@@ -3,148 +3,152 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.morgan.appdecoches.MainActivity2">
 
-    <TableLayout
+    <TextView
+        android:text="Información general"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Marca:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewMarca"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/editTextMarca"
+        android:layout_alignBottom="@+id/editTextMarca"
+        android:layout_alignLeft="@+id/textViewFundador"
+        android:layout_alignStart="@+id/textViewFundador" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextMarca"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/editTextFundador"
+        android:layout_alignStart="@+id/editTextFundador"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:text="Fundador:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewFundador"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/editTextFundador"
+        android:layout_alignBottom="@+id/editTextFundador"
+        android:layout_alignRight="@+id/textViewWeb"
+        android:layout_alignEnd="@+id/textViewWeb" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextFundador"
+        android:layout_below="@+id/editTextMarca"
+        android:layout_alignLeft="@+id/editTextFundacion"
+        android:layout_alignStart="@+id/editTextFundacion" />
+
+    <TextView
+        android:text="Fundación: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewFundacion"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/editTextFundacion"
+        android:layout_alignBottom="@+id/editTextFundacion"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextFundacion"
+        android:layout_below="@+id/editTextFundador"
+        android:layout_toRightOf="@+id/textViewFundacion"
+        android:layout_toEndOf="@+id/textViewFundacion"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
 
-            <TextView
-                android:text="Información general"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView6"
-                android:textSize="24sp"
-                android:textStyle="normal|bold"
-                android:textColor="@android:color/background_dark" />
-        </TableRow>
+    <TextView
+        android:text="Modelo: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewModelo"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/editTextFundacion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewWeb"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:text="Sitio web: "
+        android:paddingTop="20dp"
+        android:layout_below="@+id/imageViewCoche"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-            <TextView
-                android:text="Marca: "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textViewMarca"
-                android:textSize="18sp"
-                android:textColor="@android:color/background_dark" />
+    <TextView
+        android:text="@string/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewWeb"
+        android:layout_alignLeft="@+id/editTextModelo"
+        android:layout_alignStart="@+id/editTextModelo"
+        android:id="@+id/textViewLink"
+        android:textColor="@android:color/holo_blue_light"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp" />
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/editTextMarca" />
-        </TableRow>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextModelo"
+        android:layout_alignBaseline="@+id/textViewModelo"
+        android:layout_alignBottom="@+id/textViewModelo"
+        android:layout_alignLeft="@+id/editTextFundacion"
+        android:layout_alignStart="@+id/editTextFundacion" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:text="Fundador:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textViewFundador"
-                android:textSize="18sp"
-                android:textColor="@android:color/background_dark" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/editTextFundador" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:text="Fundación: "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textViewFundacion"
-                android:textSize="18sp"
-                android:textColor="@android:color/background_dark" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/editTextFundacion" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:text="Modelo: "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textViewModelo"
-                android:textSize="18sp"
-                android:textColor="@android:color/background_dark" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/editTextModelo" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/bugattiveyron"
-                android:id="@+id/imageViewCoche"
-                android:layout_marginLeft="19dp"
-                android:layout_marginStart="19dp"
-                android:layout_marginBottom="81dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textViewWeb"
-                android:textSize="18sp"
-                android:textColor="@android:color/background_dark"
-                android:text="Sitio web: "
-                android:paddingTop="30dp" />
-
-        </TableRow>
-    </TableLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bugatti_veyron"
+        android:id="@+id/imageViewCoche"
+        android:layout_below="@+id/editTextModelo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

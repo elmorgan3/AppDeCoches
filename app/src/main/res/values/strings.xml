@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppDeCoches</string>
+    <string name="link"><u>link</u></string>
 </resources>

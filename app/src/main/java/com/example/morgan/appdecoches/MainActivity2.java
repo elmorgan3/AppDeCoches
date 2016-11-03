@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static com.example.morgan.appdecoches.R.id.textViewMarca;
-
 public class MainActivity2 extends AppCompatActivity {
 
     @Override
@@ -24,7 +22,7 @@ public class MainActivity2 extends AppCompatActivity {
         EditText editTextFundacion = (EditText)findViewById(R.id.editTextFundacion);
         EditText editTextModelo = (EditText)findViewById(R.id.editTextModelo);
 
-        TextView textViewWeb = (TextView)findViewById(R.id.textViewWeb);
+        TextView textViewLink = (TextView)findViewById(R.id.textViewLink);
 
         ImageView imageViewCoche = (ImageView)findViewById(R.id.imageViewCoche);
 
@@ -36,29 +34,231 @@ public class MainActivity2 extends AppCompatActivity {
         // de cual sea mostrar una imagen o otra
         switch (b.getString("coche"))
         {
-            case "bugatti":
-                editTextMarca.setText("Bugatti.");
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "bentley":
 
-                editTextFundador.setText("Ettore Bugatti.");
-                editTextFundacion.setText("1909.");
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Bentley");
+                editTextFundador.setText("Walter Bentley");
+                editTextFundacion.setText("1919");
+                editTextModelo.setText("Continental GT3-R");
 
-                textViewWeb.setOnClickListener(new View.OnClickListener() {
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.bentley_continental_gt3_r);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://www.bentleymotors.com/en.html");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
                     @Override
-                    public void onClick(View view) {
-                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("Sitio web: http://www.bugatti.com/home/"));
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bentleymotors.com/en.html"));
+
+                        //Iniciamos el Intent
                         startActivity(i);
                     }
                 });
 
+                break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "bugatti":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Bugatti");
+                editTextFundador.setText("Ettore Bugatti");
+                editTextFundacion.setText("1909");
                 editTextModelo.setText("Veyron");
-                imageViewCoche.setImageResource(R.drawable.bugattiveyron);
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.bugatti_veyron);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://www.bugatti.com/home/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bugatti.com/home/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
 
                 break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "cadillac":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Cadillac");
+                editTextFundador.setText("Henry Ford");
+                editTextFundacion.setText("1902.");
+                editTextModelo.setText("Eldorado Brougham");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.cadillac_eldorado_brougham);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://www.cadillac.com/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cadillac.com/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "chevrolet":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Chevrolet");
+                editTextFundador.setText("Luis Chevrolet");
+                editTextFundacion.setText("1911.");
+                editTextModelo.setText("Camaro");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.chevrolet_camaro);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://es.chevrolet.com/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://es.chevrolet.com/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "dodge":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Dodge");
+                editTextFundador.setText("John Dodge");
+                editTextFundacion.setText("1914.");
+                editTextModelo.setText("Camaro");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.dodge_challenger);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://es.dodge.com/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://es.dodge.com/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "lexus":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Lexus");
+                editTextFundador.setText("Eiji Toyoda");
+                editTextFundacion.setText("1989.");
+                editTextModelo.setText("LFA");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.lexus_lfa);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://www.lexus.com/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.lexus.com/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+            //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
+            case "morgan":
+
+                //Rellenamos los editText que corresponde con este caso
+                editTextMarca.setText("Morgan");
+                editTextFundador.setText("H.F.S. Morgan");
+                editTextFundacion.setText("1910");
+                editTextModelo.setText("Aero 8");
+
+                //Añadimos la imagen que tiene que aparecer
+                imageViewCoche.setImageResource(R.drawable.morgan_aero8);
+
+                //El link que nos llevara a la pagina web del coche
+                textViewLink.setText("http://www.morgan-motor.co.uk/");
+
+                //Este metodo es para que cuando pulsen el link se habra
+                // el navegador y vaya a la web
+                textViewLink.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        //Creamos el objeto intent y le decimos la URL a la que queremos ir
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.morgan-motor.co.uk/"));
+
+                        //Iniciamos el Intent
+                        startActivity(i);
+                    }
+                });
+
+                break;
+
+
         }
-
-
-
-
-
     }
 }

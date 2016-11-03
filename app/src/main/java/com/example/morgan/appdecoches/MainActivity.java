@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity  {
 
     //Declaro todas las variables de tipo ImageBotton con los respectivos nombres
-    ImageButton btnBuagatti, btnCadillac, btnChevrolet, btnDodge, btnDodgeViper, btnLexus, btnMorgan, btnMustang, btnSmart, btnTesla;
+    ImageButton btnBentley, btnBuagatti, btnCadillac, btnChevrolet, btnDodge,  btnLexus, btnMorgan, btnSmart, btnSubaru, btnTesla;
 
     //Creamos el bundle para meter dentro que boton han pulsado
     Bundle b = new Bundle();
@@ -25,32 +25,28 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
         //Hago el casting para relacionar todos los objetos con su view en la activity
+        btnBentley = (ImageButton) findViewById(R.id.imageButtonBentley);
         btnBuagatti = (ImageButton) findViewById(R.id.imageButtonBugatti);
         btnCadillac = (ImageButton) findViewById(R.id.imageButtonCadillac);
         btnChevrolet = (ImageButton) findViewById(R.id.imageButtonChevrolet);
         btnDodge = (ImageButton) findViewById(R.id.imageButtonDodge);
-        btnDodgeViper = (ImageButton) findViewById(R.id.imageButtonDodgeViper);
         btnLexus = (ImageButton) findViewById(R.id.imageButtonLexus);
         btnMorgan = (ImageButton) findViewById(R.id.imageButtonMorgan);
-        btnMustang = (ImageButton) findViewById(R.id.imageButtonMustang);
+        btnSubaru = (ImageButton) findViewById(R.id.imageButtonSubaru);
         btnSmart = (ImageButton) findViewById(R.id.imageButtonSmart);
         btnTesla = (ImageButton) findViewById(R.id.imageButtonTesla);
+    }
 
+    public void btnBentley(View v)
+    {
+        //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
+        coche = "bentley";
 
-        /*
-        //Cremos los listener para cada boton para luego poder haver un switch
-        btnBuagatti.setOnClickListener(this);
-        btnCadillac.setOnClickListener(this);
-        btnChevrolet.setOnClickListener(this);
-        btnDodge.setOnClickListener(this);
-        btnDodgeViper.setOnClickListener(this);
-        btnLexus.setOnClickListener(this);
-        btnMorgan.setOnClickListener(this);
-        btnMustang.setOnClickListener(this);
-        btnSmart.setOnClickListener(this);
-        btnTesla.setOnClickListener(this);
-        */
+        //Metemos en un cajon del bundle un dato, le pones de id "coche"
+        //y metemos la variable que contiene que coche han elegido
+        b.putString("coche", coche.toString());
 
+        enviar(b);
     }
 
     public void btnBugatti(View v)
@@ -102,18 +98,6 @@ public class MainActivity extends AppCompatActivity  {
         enviar(b);
     }
 
-    public void btnDodgeViper(View v)
-    {
-        //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
-        coche = "dodgeViper";
-
-        //Metemos en un cajon del bundle un dato, le pones de id "coche"
-        //y metemos la variable que contiene que coche han elegido
-        b.putString("coche", coche.toString());
-
-        enviar(b);
-    }
-
     public void btnLexus(View v)
     {
         //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
@@ -138,10 +122,10 @@ public class MainActivity extends AppCompatActivity  {
         enviar(b);
     }
 
-    public void btnMustang(View v)
+    public void btnSmart(View v)
     {
         //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
-        coche = "musang";
+        coche = "smart";
 
         //Metemos en un cajon del bundle un dato, le pones de id "coche"
         //y metemos la variable que contiene que coche han elegido
@@ -150,10 +134,10 @@ public class MainActivity extends AppCompatActivity  {
         enviar(b);
     }
 
-    public void btnSmart(View v)
+    public void btnSubaru(View v)
     {
         //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
-        coche = "smart";
+        coche = "subaru";
 
         //Metemos en un cajon del bundle un dato, le pones de id "coche"
         //y metemos la variable que contiene que coche han elegido
@@ -188,9 +172,5 @@ public class MainActivity extends AppCompatActivity  {
         startActivity(intencion);
     }
 
-    /*public void onClick(View v)
-    {
-
-    }*/
 
 }
