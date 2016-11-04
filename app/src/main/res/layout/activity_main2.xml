@@ -34,18 +34,6 @@
         android:layout_alignLeft="@+id/textViewFundador"
         android:layout_alignStart="@+id/textViewFundador" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editTextMarca"
-        android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/editTextFundador"
-        android:layout_alignStart="@+id/editTextFundador"
-        android:layout_marginTop="11dp" />
-
     <TextView
         android:text="Fundador:"
         android:layout_width="wrap_content"
@@ -57,17 +45,6 @@
         android:layout_alignBottom="@+id/editTextFundador"
         android:layout_alignRight="@+id/textViewWeb"
         android:layout_alignEnd="@+id/textViewWeb" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editTextFundador"
-        android:layout_below="@+id/editTextMarca"
-        android:layout_alignLeft="@+id/editTextFundacion"
-        android:layout_alignStart="@+id/editTextFundacion" />
 
     <TextView
         android:text="Fundación: "
@@ -81,19 +58,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editTextFundacion"
-        android:layout_below="@+id/editTextFundador"
-        android:layout_toRightOf="@+id/textViewFundacion"
-        android:layout_toEndOf="@+id/textViewFundacion"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp" />
-
     <TextView
         android:text="Modelo: "
         android:layout_width="wrap_content"
@@ -106,18 +70,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
-    <TextView
-        android:text="@string/link"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textViewWeb"
-        android:layout_alignLeft="@+id/editTextModelo"
-        android:layout_alignStart="@+id/editTextModelo"
-        android:id="@+id/textViewLink"
-        android:textColor="@android:color/holo_blue_light"
-        android:fontFamily="sans-serif"
-        android:textSize="18sp" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,12 +80,14 @@
         android:layout_alignBaseline="@+id/textViewModelo"
         android:layout_alignBottom="@+id/textViewModelo"
         android:layout_alignLeft="@+id/editTextFundacion"
-        android:layout_alignStart="@+id/editTextFundacion" />
+        android:layout_alignStart="@+id/editTextFundacion"
+        android:clickable="false"
+        android:enabled="false" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bugatti_veyron"
+        app:srcCompat="@drawable/bugatti_chiron"
         android:id="@+id/imageViewCoche"
         android:layout_marginTop="11dp"
         android:layout_below="@+id/editTextModelo"
@@ -148,8 +102,63 @@
         android:textColor="@android:color/background_dark"
         android:text="Sitio web: "
         android:paddingTop="20dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/imageViewCoche"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewLink"
+        android:textColor="@android:color/holo_blue_light"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/textViewWeb"
+        android:layout_alignBottom="@+id/textViewWeb"
+        android:layout_alignLeft="@+id/editTextModelo"
+        android:layout_alignStart="@+id/editTextModelo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextMarca"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView6"
+        android:layout_toRightOf="@+id/textViewFundacion"
+        android:layout_toEndOf="@+id/textViewFundacion"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:clickable="false"
+        android:enabled="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextFundacion"
+        android:layout_below="@+id/editTextFundador"
+        android:layout_alignLeft="@+id/editTextMarca"
+        android:layout_alignStart="@+id/editTextMarca"
+        android:clickable="false"
+        android:enabled="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editTextFundador"
+        android:layout_below="@+id/editTextMarca"
+        android:layout_alignLeft="@+id/editTextMarca"
+        android:layout_alignStart="@+id/editTextMarca"
+        android:clickable="false"
+        android:enabled="false" />
 
 </RelativeLayout>

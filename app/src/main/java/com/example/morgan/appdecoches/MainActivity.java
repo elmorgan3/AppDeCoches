@@ -156,9 +156,10 @@ public class MainActivity extends AppCompatActivity  {
         b.putString("coche", coche.toString());
 
         enviar(b);
-
     }
 
+    //Este metodo recibe el bundle de los otros metodos y activa
+    // un Intent para ir a la otra activity
     public void enviar (Bundle b)
     {
         //Creamos un objeto del tipo Intent, que sirve para ir de una activity a otra
@@ -171,6 +172,9 @@ public class MainActivity extends AppCompatActivity  {
         //Activamos el Intent
         startActivity(intencion);
     }
+
+
+
 
 
 }

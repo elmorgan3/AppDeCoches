@@ -134,6 +134,7 @@
                     app:srcCompat="@drawable/chevrolet"
                     android:id="@+id/imageButtonChevrolet"
                     android:onClick="btnChevrolet" />
+
             </TableRow>
 
             <TableRow
@@ -164,6 +165,20 @@
                     android:onClick="btnBugatti"
                     android:background="@android:color/transparent" />
 
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:text="Jugar"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/buttonJugar"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp" />
             </TableRow>
 
         </TableLayout>

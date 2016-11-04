@@ -73,10 +73,10 @@ public class MainActivity2 extends AppCompatActivity {
                 editTextMarca.setText("Bugatti");
                 editTextFundador.setText("Ettore Bugatti");
                 editTextFundacion.setText("1909");
-                editTextModelo.setText("Veyron");
+                editTextModelo.setText("Chiron");
 
                 //Añadimos la imagen que tiene que aparecer
-                imageViewCoche.setImageResource(R.drawable.bugatti_veyron);
+                imageViewCoche.setImageResource(R.drawable.bugatti_chiron);
 
                 //El link que nos llevara a la pagina web del coche
                 textViewLink.setText("http://www.bugatti.com/home/");
