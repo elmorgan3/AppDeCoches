@@ -6,12 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity  {
 
     //Declaro todas las variables de tipo ImageBotton con los respectivos nombres
     ImageButton btnBentley, btnBuagatti, btnCadillac, btnChevrolet, btnDodge,  btnLexus, btnMcLaren, btnMorgan, btnSubaru, btnTesla;
+
+    //Declaro el boton que usare para iniciar el juego
+    Button btnJuego;
 
     //Creamos el bundle para meter dentro que boton han pulsado
     Bundle b = new Bundle();
@@ -35,6 +39,8 @@ public class MainActivity extends AppCompatActivity  {
         btnMorgan = (ImageButton) findViewById(R.id.imageButtonMorgan);
         btnSubaru = (ImageButton) findViewById(R.id.imageButtonSubaru);
         btnTesla = (ImageButton) findViewById(R.id.imageButtonTesla);
+
+        btnJuego = (Button)findViewById(R.id.buttonJugar);
     }
 
     public void btnBentley(View v)
@@ -158,6 +164,18 @@ public class MainActivity extends AppCompatActivity  {
         enviar(b);
     }
 
+    public void juego (View v)
+    {
+        //Creo la variable para decir que el juego a empezado
+        coche = "juego";
+
+        //Metemos en un cajon del bundle un dato, le pones de id "coche"
+        //y metemos la variable que contiene que coche han elegido
+        b.putString("coche", coche.toString());
+
+        enviar(b);
+    }
+
     //Este metodo recibe el bundle de los otros metodos y activa
     // un Intent para ir a la otra activity
     public void enviar (Bundle b)
@@ -172,6 +190,9 @@ public class MainActivity extends AppCompatActivity  {
         //Activamos el Intent
         startActivity(intencion);
     }
+
+
+
 
 
 

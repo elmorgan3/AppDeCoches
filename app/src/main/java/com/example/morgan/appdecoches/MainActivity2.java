@@ -169,7 +169,7 @@ public class MainActivity2 extends AppCompatActivity {
                 editTextMarca.setText("Dodge");
                 editTextFundador.setText("John Dodge");
                 editTextFundacion.setText("1914.");
-                editTextModelo.setText("Camaro");
+                editTextModelo.setText("Challenger");
 
                 //Añadimos la imagen que tiene que aparecer
                 imageViewCoche.setImageResource(R.drawable.dodge_challenger);
@@ -353,10 +353,6 @@ public class MainActivity2 extends AppCompatActivity {
                 });
 
                 break;
-
-
-
-
         }
     }
 }

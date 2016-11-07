@@ -82,7 +82,8 @@
         android:layout_alignLeft="@+id/editTextFundacion"
         android:layout_alignStart="@+id/editTextFundacion"
         android:clickable="false"
-        android:enabled="false" />
+        android:selectAllOnFocus="false"
+        android:focusable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -101,7 +102,7 @@
         android:textSize="18sp"
         android:textColor="@android:color/background_dark"
         android:text="Sitio web: "
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:layout_below="@+id/imageViewCoche"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -133,7 +134,7 @@
         android:layout_marginLeft="6dp"
         android:layout_marginStart="6dp"
         android:clickable="false"
-        android:enabled="false" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -146,7 +147,7 @@
         android:layout_alignLeft="@+id/editTextMarca"
         android:layout_alignStart="@+id/editTextMarca"
         android:clickable="false"
-        android:enabled="false" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -159,6 +160,43 @@
         android:layout_alignLeft="@+id/editTextMarca"
         android:layout_alignStart="@+id/editTextMarca"
         android:clickable="false"
-        android:enabled="false" />
+        android:focusable="false" />
+
+    <Button
+        android:text="Comprobar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/buttonComprobar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textViewFundador"
+        android:layout_alignStart="@+id/textViewFundador"
+        android:visibility="invisible"
+        android:onClick="buttonComprobar" />
+
+    <Button
+        android:text="Siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSiguiente"
+        android:layout_alignBaseline="@+id/buttonComprobar"
+        android:layout_alignBottom="@+id/buttonComprobar"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:onClick="buttonSiguiente" />
+
+    <Button
+        android:text="Salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSalir"
+        android:layout_alignBaseline="@+id/buttonSiguiente"
+        android:layout_alignBottom="@+id/buttonSiguiente"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:visibility="invisible"
+        android:onClick="buttonSalir" />
 
 </RelativeLayout>
