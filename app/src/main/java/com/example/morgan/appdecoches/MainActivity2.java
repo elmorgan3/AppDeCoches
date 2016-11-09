@@ -11,29 +11,42 @@ import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    //Declaro las variables con las que identificare cada elemento
+    EditText editTextMarca;
+    EditText editTextFundador;
+    EditText editTextFundacion;
+    EditText editTextModelo;
+    TextView textViewLink;
+    ImageView imageViewCoche;
+
+    //Declaro esta variable que me servira para saber si el juego esta en marcha
+    boolean juego = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        //Creo los objetos de los tipos que hay en la activity
-        EditText editTextMarca = (EditText)findViewById(R.id.editTextMarca);
-        EditText editTextFundador = (EditText)findViewById(R.id.editTextFundador);
-        EditText editTextFundacion = (EditText)findViewById(R.id.editTextFundacion);
-        EditText editTextModelo = (EditText)findViewById(R.id.editTextModelo);
+        //Hago el casting para relacionar los objetos creados aqui con los de la activity
+        editTextMarca = (EditText) findViewById(R.id.editTextMarca);
+        editTextFundador = (EditText) findViewById(R.id.editTextFundador);
+        editTextFundacion = (EditText) findViewById(R.id.editTextFundacion);
+        editTextModelo = (EditText) findViewById(R.id.editTextModelo);
 
-        TextView textViewLink = (TextView)findViewById(R.id.textViewLink);
+        textViewLink = (TextView) findViewById(R.id.textViewLink);
 
-        ImageView imageViewCoche = (ImageView)findViewById(R.id.imageViewCoche);
+        imageViewCoche = (ImageView) findViewById(R.id.imageViewCoche);
 
         //Creamos un bundle y preguntamos si el Intent de la llamada lleva algo
         //en el intent
         Bundle b = getIntent().getExtras();
 
+
+
+
         //Hacemos un switch para que saber que boton al pulsado y dependiendo
         // de cual sea mostrar una imagen o otra
-        switch (b.getString("coche"))
-        {
+        switch (b.getString("coche")) {
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case "bentley":
 
@@ -51,11 +64,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bentleymotors.com/en.html"));
 
@@ -83,11 +94,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bugatti.com/home/"));
 
@@ -115,11 +124,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cadillac.com/"));
 
@@ -147,11 +154,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://es.chevrolet.com/"));
 
@@ -179,11 +184,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://es.dodge.com/"));
 
@@ -211,11 +214,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.lexus.com/"));
 
@@ -243,11 +244,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cars.mclaren.com/"));
 
@@ -275,11 +274,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.morgan-motor.co.uk/"));
 
@@ -307,11 +304,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.subaru.jp/"));
 
@@ -339,11 +334,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //Este metodo es para que cuando pulsen el link se habra
                 // el navegador y vaya a la web
-                textViewLink.setOnClickListener(new View.OnClickListener()
-                {
+                textViewLink.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Creamos el objeto intent y le decimos la URL a la que queremos ir
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.tesla.com/"));
 
@@ -354,5 +347,12 @@ public class MainActivity2 extends AppCompatActivity {
 
                 break;
         }
+
     }
 }
+
+
+
+
+
+
