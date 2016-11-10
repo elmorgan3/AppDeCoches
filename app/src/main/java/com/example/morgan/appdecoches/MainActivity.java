@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -22,6 +24,9 @@ public class MainActivity extends AppCompatActivity  {
 
     //Crea esta variable aqui para que sea accesible por varias metodos
     String coche;
+
+    //Declaro la variable que usare para hacer las preguntas
+    TextView textViewPregunta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,8 @@ public class MainActivity extends AppCompatActivity  {
         btnTesla = (ImageButton) findViewById(R.id.imageButtonTesla);
 
         btnJuego = (Button)findViewById(R.id.buttonJugar);
+
+        textViewPregunta = (TextView)findViewById(R.id.textViewPregunta);
     }
 
     public void btnBentley(View v)
@@ -164,7 +171,7 @@ public class MainActivity extends AppCompatActivity  {
         enviar(b);
     }
 
-    public void juego (View v)
+    /*public void juego (View v)
     {
         //Creo la variable para decir que el juego a empezado
         coche = "juego";
@@ -175,7 +182,7 @@ public class MainActivity extends AppCompatActivity  {
 
         enviar(b);
     }
-
+*/
     //Este metodo recibe el bundle de los otros metodos y activa
     // un Intent para ir a la otra activity
     public void enviar (Bundle b)
@@ -193,9 +200,108 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+    public void juego (View v)
+    {
+        textViewPregunta.setVisibility(View.VISIBLE);
+        int i = 0, j = 0, cantidad=10, rango=10;
+
+        //En esta array guardaremos 10 numero del 0 al 9 y no se repetira ninguno
+        int array[] = new int[cantidad];
+
+        array[i] = (int) (Math.random()*rango);
+
+        for (i=1; i<cantidad; i++)
+        {
+            array[i]=(int) (Math.random()*rango);
+
+            for (j= 0; j<i; j++)
+            {
+                if (array[i] == array[j])
+                {
+                    i--;
+                }
+            }
+        }
 
 
 
+        //Este for lo usamos para que por cada numero que haya salido sin repetirese
+        for (int cp = 0; cp<cantidad; cp++)
+        {
+          switch (array[cp])
+          {
+              case 0:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Bentley?");
+
+                  break;
 
 
+              case 1:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Bugatti?");
+
+                  break;
+
+
+              case 2:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Cadillac?");
+
+                  break;
+
+
+              case 3:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Chevrolet?");
+
+                  break;
+
+
+              case 4:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Dodge?");
+
+                  break;
+
+
+              case 5:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Lexus?");
+
+                  break;
+
+
+              case 6:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca McLaren?");
+
+                  break;
+
+
+              case 7:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Morgan?");
+
+                  break;
+
+
+              case 8:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Subaru?");
+
+                  break;
+
+
+              case 9:
+
+                  textViewPregunta.setText("¿Que simbolo es de la marca Tesla?");
+
+                  break;
+
+
+          }
+
+        }
+    }
 }
