@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity  {
     //Declaro la variable que usare para hacer las preguntas
     TextView textViewPregunta;
 
+    //Declaro un booleano para pornerlo a true cuando el juego este
+    // acativado y contador para saber cuantos aciertos lleva el jugador
+    boolean juegoEnMarcha = false;
+    int contador = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,16 +55,25 @@ public class MainActivity extends AppCompatActivity  {
         textViewPregunta = (TextView)findViewById(R.id.textViewPregunta);
     }
 
+
     public void btnBentley(View v)
     {
-        //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
-        coche = "bentley";
+        if (juegoEnMarcha == false)
+        {
+            //Creamos una vatiable para decir que coche han escogido y luego ponerlo en el bundle
+            coche = "bentley";
 
-        //Metemos en un cajon del bundle un dato, le pones de id "coche"
-        //y metemos la variable que contiene que coche han elegido
-        b.putString("coche", coche.toString());
+            //Metemos en un cajon del bundle un dato, le pones de id "coche"
+            //y metemos la variable que contiene que coche han elegido
+            b.putString("coche", coche.toString());
 
-        enviar(b);
+            enviar(b);
+        }
+        else
+        {
+
+        }
+
     }
 
     public void btnBugatti(View v)
@@ -203,6 +217,12 @@ public class MainActivity extends AppCompatActivity  {
     public void juego (View v)
     {
         textViewPregunta.setVisibility(View.VISIBLE);
+        //Con esta variable le digo que el juego ya a empezado
+        juegoEnMarcha = true;
+
+        //Bloqueo el botton de volver a juagar hasta que se acabe el juego
+        btnJuego.setEnabled(true);
+
         int i = 0, j = 0, cantidad=10, rango=10;
 
         //En esta array guardaremos 10 numero del 0 al 9 y no se repetira ninguno
@@ -228,11 +248,12 @@ public class MainActivity extends AppCompatActivity  {
         //Este for lo usamos para que por cada numero que haya salido sin repetirese
         for (int cp = 0; cp<cantidad; cp++)
         {
-          switch (array[cp])
-          {
+          switch (array[cp]) {
               case 0:
 
                   textViewPregunta.setText("¿Que simbolo es de la marca Bentley?");
+
+                  //if (btnBentley
 
                   break;
 
@@ -301,7 +322,13 @@ public class MainActivity extends AppCompatActivity  {
 
 
           }
-
         }
+        //Aqui digo que el juego ha terminado
+        juegoEnMarcha = false;
+        textViewPregunta.setVisibility(View.INVISIBLE);
+
+
+        //DesBloqueo el botton de volver a juagar hasta que se acabe el juego
+        btnJuego.setEnabled(false);
     }
 }
