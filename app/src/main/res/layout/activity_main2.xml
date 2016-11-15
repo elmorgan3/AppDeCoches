@@ -81,7 +81,6 @@
         android:layout_alignBottom="@+id/textViewModelo"
         android:layout_alignLeft="@+id/editTextFundacion"
         android:layout_alignStart="@+id/editTextFundacion"
-        android:clickable="false"
         android:selectAllOnFocus="false"
         android:focusable="false" />
 
@@ -133,7 +132,6 @@
         android:layout_toEndOf="@+id/textViewFundacion"
         android:layout_marginLeft="6dp"
         android:layout_marginStart="6dp"
-        android:clickable="false"
         android:focusable="false" />
 
     <EditText
@@ -146,7 +144,6 @@
         android:layout_below="@+id/editTextFundador"
         android:layout_alignLeft="@+id/editTextMarca"
         android:layout_alignStart="@+id/editTextMarca"
-        android:clickable="false"
         android:focusable="false" />
 
     <EditText
@@ -159,7 +156,6 @@
         android:layout_below="@+id/editTextMarca"
         android:layout_alignLeft="@+id/editTextMarca"
         android:layout_alignStart="@+id/editTextMarca"
-        android:clickable="false"
         android:focusable="false" />
 
     <Button
