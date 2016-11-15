@@ -324,11 +324,11 @@ public class MainActivity extends AppCompatActivity  {
           }
         }
         //Aqui digo que el juego ha terminado
-        juegoEnMarcha = false;
-        textViewPregunta.setVisibility(View.INVISIBLE);
+        //juegoEnMarcha = false;
+        //textViewPregunta.setVisibility(View.INVISIBLE);
 
 
         //DesBloqueo el botton de volver a juagar hasta que se acabe el juego
-        btnJuego.setEnabled(false);
+        //btnJuego.setEnabled(false);
     }
 }
