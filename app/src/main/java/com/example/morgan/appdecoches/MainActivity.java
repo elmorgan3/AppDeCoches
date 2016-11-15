@@ -190,15 +190,4 @@ public class MainActivity extends AppCompatActivity  {
         //Activamos el Intent
         startActivity(intencion);
     }
-
-
-
-
-
-
-
-
-
-
-
 }
