@@ -245,7 +245,8 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-        //Este for lo usamos para que por cada numero que haya salido sin repetirese
+        //Este for lo usamos para que por cada numero que haya salido sin
+        // repetirese haga una pregunta u otra sin repetir la pregunta
         for (int cp = 0; cp<cantidad; cp++)
         {
           switch (array[cp]) {
