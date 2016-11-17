@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+
 public class MainActivity extends AppCompatActivity  {
 
     //Declaro todas las variables de tipo ImageBotton con los respectivos nombres
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity  {
         btnTesla = (ImageButton) findViewById(R.id.imageButtonTesla);
 
         btnJuego = (Button)findViewById(R.id.buttonJugar);
+
+
     }
 
     public void btnBentley(View v)
