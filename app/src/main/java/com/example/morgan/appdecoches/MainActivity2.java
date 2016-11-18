@@ -3,6 +3,7 @@ package com.example.morgan.appdecoches;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
     int contadorAciertos=0;
 
     int numeroCoche=-1;
+
 
 
     @Override
@@ -432,6 +434,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
         switch (array[contadorPreguntas]) {
             case 0:
 
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 0;
+
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
                 editTextFundador.setText("");
@@ -461,6 +466,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 1:
+
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 1;
 
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
@@ -492,6 +500,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 2:
 
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 2;
+
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
                 editTextFundador.setText("");
@@ -521,6 +532,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 3:
+
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 3;
 
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
@@ -552,6 +566,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 4:
 
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 4;
+
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
                 editTextFundador.setText("");
@@ -581,6 +598,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 5:
+
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 5;
 
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
@@ -612,6 +632,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 6:
 
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 6;
+
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
                 editTextFundador.setText("");
@@ -641,6 +664,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 7:
+
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 7;
 
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
@@ -672,6 +698,9 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 8:
 
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 8;
+
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
                 editTextFundador.setText("");
@@ -702,6 +731,8 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
             //En el caso de que sea bugatti rellenaremos los editText con la informacion que corresponda
             case 9:
 
+                //DIGO EL NUMERO DE ESTE COCHE
+                numeroCoche = 9;
                 //Rellenamos los editText que corresponde con este caso
                 editTextMarca.setText("");
                 editTextFundador.setText("");
@@ -744,780 +775,643 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
             case R.id.buttonComprobar:
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche Bentley")("Walter Bentley")("1919")("Continental GT3-R");  0
-                if (editTextMarca.getText().toString().equals("Bentley") && contadorPreguntas == 0)
+                if (editTextMarca.getText().toString().equals("Bentley") && numeroCoche == 0)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
-                    //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
-
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+                    editTextMarca.setTextColor(Color.GREEN);
                 }
-                else if (!editTextMarca.getText().toString().equals("Bentley") && contadorPreguntas == 0)
+                else if (!editTextMarca.getText().toString().equals("Bentley") && numeroCoche == 0)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Walter Bentley") && contadorPreguntas == 0)
+                if (editTextFundador.getText().toString().equals("Walter Bentley") && numeroCoche == 0)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
+
                 }
-                else if (!editTextFundador.getText().toString().equals("Walter Bentley") && contadorPreguntas == 0)
+                else if (!editTextFundador.getText().toString().equals("Walter Bentley") && numeroCoche == 0)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1919") && contadorPreguntas == 0)
+                if (editTextFundacion.getText().toString().equals("1919") && numeroCoche == 0)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
                 }
-                else if (!editTextFundacion.getText().toString().equals("1919") && contadorPreguntas == 0)
+                else if (!editTextFundacion.getText().toString().equals("1919") && numeroCoche == 0)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("Continental GT3-R") && contadorPreguntas == 0)
+                if (editTextModelo.getText().toString().equals("Continental GT3-R") && numeroCoche == 0)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
+
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
+
                 }
-                else if (!editTextModelo.getText().toString().equals("Continental GT3-R") && contadorPreguntas == 0)
+                else if (!editTextModelo.getText().toString().equals("Continental GT3-R") && numeroCoche == 0)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el segundo coche BUGATTI ("Bugatti")("Ettore Bugatti")("1909")("Chiron")   1
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Bugatti") && contadorPreguntas == 1)
+                if (editTextMarca.getText().toString().equals("Bugatti") && numeroCoche == 1)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+
                 }
-                else if (!editTextMarca.getText().toString().equals("Bugatti") && contadorPreguntas == 1)
+                else if (!editTextMarca.getText().toString().equals("Bugatti") && numeroCoche == 1)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Ettore Bugatti") && contadorPreguntas == 1)
+                if (editTextFundador.getText().toString().equals("Ettore Bugatti") && numeroCoche == 1)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
+
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
                 }
-                else if (!editTextFundador.getText().toString().equals("Ettore Bugatti") && contadorPreguntas == 1)
+                else if (!editTextFundador.getText().toString().equals("Ettore Bugatti") && numeroCoche == 1)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1909") && contadorPreguntas == 1)
+                if (editTextFundacion.getText().toString().equals("1909") && numeroCoche == 1)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
                 }
-                else if (!editTextFundacion.getText().toString().equals("1909") && contadorPreguntas == 1)
+                else if (!editTextFundacion.getText().toString().equals("1909") && numeroCoche == 1)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("Chiron") && contadorPreguntas == 1)
+                if (editTextModelo.getText().toString().equals("Chiron") && numeroCoche == 1)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
                 }
-                else if (!editTextModelo.getText().toString().equals("Chiron") && contadorPreguntas == 1)
+                else if (!editTextModelo.getText().toString().equals("Chiron") && numeroCoche == 1)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el tercer coche Cadillac");Henry Ford");1902.");Eldorado Brougham" numero 2
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Cadillac") && contadorPreguntas == 2)
+                if (editTextMarca.getText().toString().equals("Cadillac") && numeroCoche == 2)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
                 }
-                else if (!editTextMarca.getText().toString().equals("Cadillac") && contadorPreguntas == 2)
+                else if (!editTextMarca.getText().toString().equals("Cadillac") && numeroCoche == 2)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Henry Ford") && contadorPreguntas == 2)
+                if (editTextFundador.getText().toString().equals("Henry Ford") && numeroCoche == 2)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
+
                 }
-                else if (!editTextFundador.getText().toString().equals("Henry Ford") && contadorPreguntas == 2)
+                else if (!editTextFundador.getText().toString().equals("Henry Ford") && numeroCoche == 2)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1902") && contadorPreguntas == 2)
+                if (editTextFundacion.getText().toString().equals("1902") && numeroCoche == 2)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
                 }
-                else if (!editTextFundacion.getText().toString().equals("1902") && contadorPreguntas == 2)
+                else if (!editTextFundacion.getText().toString().equals("1902") && numeroCoche == 2)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("Eldorado Brougham") && contadorPreguntas == 2)
+                if (editTextModelo.getText().toString().equals("Eldorado Brougham") && numeroCoche == 2)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
+
                 }
-                else if (!editTextModelo.getText().toString().equals("Eldorado Brougham") && contadorPreguntas == 2)
+                else if (!editTextModelo.getText().toString().equals("Eldorado Brougham") && numeroCoche == 2)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el cuarto coche ("Chevrolet")("Luis Chevrolet")("1911")("Camaro") numero 3
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Chevrolet") && contadorPreguntas == 3)
+                if (editTextMarca.getText().toString().equals("Chevrolet") && numeroCoche == 3)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
                 }
-                else if (!editTextMarca.getText().toString().equals("Chevrolet") && contadorPreguntas == 3)
+                else if (!editTextMarca.getText().toString().equals("Chevrolet") && numeroCoche == 3)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Luis Chevrolet") && contadorPreguntas == 3)
+                if (editTextFundador.getText().toString().equals("Luis Chevrolet") && numeroCoche == 3)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
-
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
                 }
-                else if (!editTextFundador.getText().toString().equals("Luis Chevrolet") && contadorPreguntas == 3)
+                else if (!editTextFundador.getText().toString().equals("Luis Chevrolet") && numeroCoche == 3)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1911") && contadorPreguntas == 3)
+                if (editTextFundacion.getText().toString().equals("1911") && numeroCoche == 3)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
                 }
-                else if (!editTextFundacion.getText().toString().equals("1911") && contadorPreguntas == 3)
+                else if (!editTextFundacion.getText().toString().equals("1911") && numeroCoche == 3)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("Camaro") && contadorPreguntas == 3)
+                if (editTextModelo.getText().toString().equals("Camaro") && numeroCoche == 3)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
                 }
-                else if (!editTextModelo.getText().toString().equals("Camaro") && contadorPreguntas == 3)
+                else if (!editTextModelo.getText().toString().equals("Camaro") && numeroCoche == 3)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el quinto coche ("Dodge")("John Dodge")("1914")("Challenger") numero 4
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Dodge") && contadorPreguntas == 4)
+                if (editTextMarca.getText().toString().equals("Dodge") && numeroCoche == 4)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
-
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+
                 }
-                else if (!editTextMarca.getText().toString().equals("Dodge") && contadorPreguntas == 4)
+                else if (!editTextMarca.getText().toString().equals("Dodge") && numeroCoche == 4)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("John Dodge") && contadorPreguntas == 4)
+                if (editTextFundador.getText().toString().equals("John Dodge") && numeroCoche == 4)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
+
                 }
-                else if (!editTextFundador.getText().toString().equals("John Dodge") && contadorPreguntas == 4)
+                else if (!editTextFundador.getText().toString().equals("John Dodge") && numeroCoche == 4)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1914") && contadorPreguntas == 4)
+                if (editTextFundacion.getText().toString().equals("1914") && numeroCoche == 4)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
+
                 }
-                else if (!editTextFundacion.getText().toString().equals("1914") && contadorPreguntas == 4)
+                else if (!editTextFundacion.getText().toString().equals("1914") && numeroCoche == 4)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("Challenger") && contadorPreguntas == 4)
+                if (editTextModelo.getText().toString().equals("Challenger") && numeroCoche == 4)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
+
                 }
-                else if (!editTextModelo.getText().toString().equals("Challenger") && contadorPreguntas == 4)
+                else if (!editTextModelo.getText().toString().equals("Challenger") && numeroCoche == 4)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el sexto coche ("Lexus")("Eiji Toyoda")("1989")("LFA")   numero 5
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Lexus") && contadorPreguntas == 5)
+                if (editTextMarca.getText().toString().equals("Lexus") && numeroCoche == 5)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+
                 }
-                else if (!editTextMarca.getText().toString().equals("Lexus") && contadorPreguntas == 5)
+                else if (!editTextMarca.getText().toString().equals("Lexus") && numeroCoche == 5)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Eiji Toyoda") && contadorPreguntas == 5)
+                if (editTextFundador.getText().toString().equals("Eiji Toyoda") && numeroCoche == 5)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
+
                 }
-                else if (!editTextFundador.getText().toString().equals("Eiji Toyoda") && contadorPreguntas == 5)
+                else if (!editTextFundador.getText().toString().equals("Eiji Toyoda") && numeroCoche == 5)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1989") && contadorPreguntas == 5)
+                if (editTextFundacion.getText().toString().equals("1989") && numeroCoche == 5)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
+
                 }
-                else if (!editTextFundacion.getText().toString().equals("1989") && contadorPreguntas == 5)
+                else if (!editTextFundacion.getText().toString().equals("1989") && numeroCoche == 5)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("LFA") && contadorPreguntas == 5)
+                if (editTextModelo.getText().toString().equals("LFA") && numeroCoche == 5)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
-
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
+
                 }
-                else if (!editTextModelo.getText().toString().equals("LFA") && contadorPreguntas == 5)
+                else if (!editTextModelo.getText().toString().equals("LFA") && numeroCoche == 5)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el septimo coche ("McLaren")("Ron Dennis")("1989")("P1")   numero 6
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("McLaren") && contadorPreguntas == 6)
+                if (editTextMarca.getText().toString().equals("McLaren") && numeroCoche == 6)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
-
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+
                 }
-                else if (!editTextMarca.getText().toString().equals("McLaren") && contadorPreguntas == 6)
+                else if (!editTextMarca.getText().toString().equals("McLaren") && numeroCoche == 6)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Ron Dennis") && contadorPreguntas == 6)
+                if (editTextFundador.getText().toString().equals("Ron Dennis") && numeroCoche == 6)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
+
                 }
-                else if (!editTextFundador.getText().toString().equals("Ron Dennis") && contadorPreguntas == 6)
+                else if (!editTextFundador.getText().toString().equals("Ron Dennis") && numeroCoche == 6)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1989") && contadorPreguntas == 6)
+                if (editTextFundacion.getText().toString().equals("1989") && numeroCoche == 6)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
+
                 }
-                else if (!editTextFundacion.getText().toString().equals("1989") && contadorPreguntas == 6)
+                else if (!editTextFundacion.getText().toString().equals("1989") && numeroCoche == 6)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("P1") && contadorPreguntas == 6)
+                if (editTextModelo.getText().toString().equals("P1") && numeroCoche == 6)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
+
                 }
-                else if (!editTextModelo.getText().toString().equals("P1") && contadorPreguntas == 6)
+                else if (!editTextModelo.getText().toString().equals("P1") && numeroCoche == 6)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el octabo coche ("Morgan")("H.F.S. Morgan")("1910")("Aero 8")   numero 7
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Morgan") && contadorPreguntas == 7)
+                if (editTextMarca.getText().toString().equals("Morgan") && numeroCoche == 7)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+
                 }
-                else if (!editTextMarca.getText().toString().equals("Morgan") && contadorPreguntas == 7)
+                else if (!editTextMarca.getText().toString().equals("Morgan") && numeroCoche == 7)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("H.F.S. Morgan") && contadorPreguntas == 7)
+                if (editTextFundador.getText().toString().equals("H.F.S. Morgan") && numeroCoche == 7)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
+
                 }
-                else if (!editTextFundador.getText().toString().equals("H.F.S. Morgan") && contadorPreguntas == 7)
+                else if (!editTextFundador.getText().toString().equals("H.F.S. Morgan") && numeroCoche == 7)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1910") && contadorPreguntas == 7)
+                if (editTextFundacion.getText().toString().equals("1910") && numeroCoche == 7)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
+
                 }
-                else if (!editTextFundacion.getText().toString().equals("1910") && contadorPreguntas == 7)
+                else if (!editTextFundacion.getText().toString().equals("1910") && numeroCoche == 7)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("Aero 8") && contadorPreguntas == 7)
+                if (editTextModelo.getText().toString().equals("Aero 8") && numeroCoche == 7)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
+
                 }
-                else if (!editTextModelo.getText().toString().equals("Aero 8") && contadorPreguntas == 7)
+                else if (!editTextModelo.getText().toString().equals("Aero 8") && numeroCoche == 7)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el noveno coche ("Subaru")("Chikuhei Nakajima")("1953")("BRZ")  numero 8
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Subaru") && contadorPreguntas == 8)
+                if (editTextMarca.getText().toString().equals("Subaru") && numeroCoche == 8)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+
                 }
-                else if (!editTextMarca.getText().toString().equals("Subaru") && contadorPreguntas == 8)
+                else if (!editTextMarca.getText().toString().equals("Subaru") && numeroCoche == 8)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Chikuhei Nakajima") && contadorPreguntas == 8)
+                if (editTextFundador.getText().toString().equals("Chikuhei Nakajima") && numeroCoche == 8)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
+
                 }
-                else if (!editTextFundador.getText().toString().equals("Chikuhei Nakajima") && contadorPreguntas == 8)
+                else if (!editTextFundador.getText().toString().equals("Chikuhei Nakajima") && numeroCoche == 8)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("1953") && contadorPreguntas == 8)
+                if (editTextFundacion.getText().toString().equals("1953") && numeroCoche == 8)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
+
                 }
-                else if (!editTextFundacion.getText().toString().equals("1953") && contadorPreguntas == 8)
+                else if (!editTextFundacion.getText().toString().equals("1953") && numeroCoche == 8)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("BRZ") && contadorPreguntas == 8)
+                if (editTextModelo.getText().toString().equals("BRZ") && numeroCoche == 8)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
                 }
-                else if (!editTextModelo.getText().toString().equals("BRZ") && contadorPreguntas == 8)
+                else if (!editTextModelo.getText().toString().equals("BRZ") && numeroCoche == 8)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
 
                 //////////////Ahora compruebo el el decimo coche ("Tesla")("Elon Musk")("2003")("Roadster")  numero 9
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextMarca.getText().toString().equals("Tesla") && contadorPreguntas == 9)
+                if (editTextMarca.getText().toString().equals("Tesla") && numeroCoche == 9)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextMarca.setBackgroundColor(Color.GREEN);
+                    editTextMarca.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextMarca.setEnabled(true);
+
                 }
-                else if (!editTextMarca.getText().toString().equals("Tesla") && contadorPreguntas == 9)
+                else if (!editTextMarca.getText().toString().equals("Tesla") && numeroCoche == 9)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextMarca.setBackgroundColor(Color.RED);
+                    editTextMarca.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundador.getText().toString().equals("Elon Musk") && contadorPreguntas == 9)
+                if (editTextFundador.getText().toString().equals("Elon Musk") && numeroCoche == 9)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundador.setBackgroundColor(Color.GREEN);
+                    editTextFundador.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundador.setEnabled(true);
                 }
-                else if (!editTextFundador.getText().toString().equals("Elon Musk") && contadorPreguntas == 9)
+                else if (!editTextFundador.getText().toString().equals("Elon Musk") && numeroCoche == 9)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundador.setBackgroundColor(Color.RED);
+                    editTextFundador.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextFundacion.getText().toString().equals("2003") && contadorPreguntas == 9)
+                if (editTextFundacion.getText().toString().equals("2003") && numeroCoche == 9)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextFundacion.setBackgroundColor(Color.GREEN);
+                    editTextFundacion.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextFundacion.setEnabled(true);
+
                 }
-                else if (!editTextFundacion.getText().toString().equals("2003") && contadorPreguntas == 9)
+                else if (!editTextFundacion.getText().toString().equals("2003") && numeroCoche == 9)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextFundacion.setBackgroundColor(Color.RED);
+                    editTextFundacion.setTextColor(Color.RED);
                 }
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                else if (editTextModelo.getText().toString().equals("Roadster") && contadorPreguntas == 9)
+                if (editTextModelo.getText().toString().equals("Roadster") && numeroCoche == 9)
                 {
-                    //Contamos un acierto
-                    contadorAciertos++;
 
                     //El edit text para decir que es correcto
-                    editTextModelo.setBackgroundColor(Color.GREEN);
+                    editTextModelo.setTextColor(Color.GREEN);
 
-                    //Bloqueo el editText para que no se pueda volver a escoger ese numero
-                    editTextModelo.setEnabled(true);
+
                 }
-                else if (!editTextModelo.getText().toString().equals("Roadster") && contadorPreguntas == 9)
+                else if (!editTextModelo.getText().toString().equals("Roadster") && numeroCoche == 9)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
-                    editTextModelo.setBackgroundColor(Color.RED);
+                    editTextModelo.setTextColor(Color.RED);
                 }
 
 
@@ -1532,28 +1426,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //BENTLEY
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Bentley") && contadorPreguntas == 0)
+                if (editTextMarca.getText().toString().equals("Bentley") && numeroCoche == 0)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Walter Bentley") && contadorPreguntas == 0)
+                if (editTextFundador.getText().toString().equals("Walter Bentley") && numeroCoche == 0)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1919") && contadorPreguntas == 0)
+                if (editTextFundacion.getText().toString().equals("1919") && numeroCoche == 0)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Continental GT3-R") && contadorPreguntas == 0)
+                if (editTextModelo.getText().toString().equals("Continental GT3-R") && numeroCoche == 0)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1563,28 +1457,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //BUGATTI
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Bugatti") && contadorPreguntas == 1)
+                if (editTextMarca.getText().toString().equals("Bugatti") && numeroCoche == 1)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Ettore Bugatti") && contadorPreguntas == 1)
+                if (editTextFundador.getText().toString().equals("Ettore Bugatti") && numeroCoche == 1)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1909") && contadorPreguntas == 1)
+                if (editTextFundacion.getText().toString().equals("1909") && numeroCoche == 1)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Chiron") && contadorPreguntas == 1)
+                if (editTextModelo.getText().toString().equals("Chiron") && numeroCoche == 1)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1594,28 +1488,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //CADILLAC
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Cadillac") && contadorPreguntas == 2)
+                if (editTextMarca.getText().toString().equals("Cadillac") && numeroCoche == 2)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Henry Ford") && contadorPreguntas == 2)
+                if (editTextFundador.getText().toString().equals("Henry Ford") && numeroCoche == 2)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1902") && contadorPreguntas == 2)
+                if (editTextFundacion.getText().toString().equals("1902") && numeroCoche == 2)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Eldorado Brougham") && contadorPreguntas == 2)
+                if (editTextModelo.getText().toString().equals("Eldorado Brougham") && numeroCoche == 2)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1625,28 +1519,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //CHEVROLET
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Chevrolet") && contadorPreguntas == 3)
+                if (editTextMarca.getText().toString().equals("Chevrolet") && numeroCoche == 3)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Luis Chevrolet") && contadorPreguntas == 3)
+                if (editTextFundador.getText().toString().equals("Luis Chevrolet") && numeroCoche == 3)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1911") && contadorPreguntas == 3)
+                if (editTextFundacion.getText().toString().equals("1911") && numeroCoche == 3)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Camaro") && contadorPreguntas == 3)
+                if (editTextModelo.getText().toString().equals("Camaro") && numeroCoche == 3)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1656,28 +1550,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //DODGE
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Dodge") && contadorPreguntas == 4)
+                if (editTextMarca.getText().toString().equals("Dodge") && numeroCoche == 4)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("John Dodge") && contadorPreguntas == 4)
+                if (editTextFundador.getText().toString().equals("John Dodge") && numeroCoche == 4)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1914") && contadorPreguntas == 4)
+                if (editTextFundacion.getText().toString().equals("1914") && numeroCoche == 4)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Challenger") && contadorPreguntas == 4)
+                if (editTextModelo.getText().toString().equals("Challenger") && numeroCoche == 4)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1687,28 +1581,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //LEXUS
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Lexus") && contadorPreguntas == 5)
+                if (editTextMarca.getText().toString().equals("Lexus") && numeroCoche == 5)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Eiji Toyoda") && contadorPreguntas == 5)
+                if (editTextFundador.getText().toString().equals("Eiji Toyoda") && numeroCoche == 5)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1989") && contadorPreguntas == 5)
+                if (editTextFundacion.getText().toString().equals("1989") && numeroCoche == 5)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("LFA") && contadorPreguntas == 5)
+                if (editTextModelo.getText().toString().equals("LFA") && numeroCoche == 5)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1718,28 +1612,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //MCLAREN
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("McLaren") && contadorPreguntas == 6)
+                if (editTextMarca.getText().toString().equals("McLaren") && numeroCoche == 6)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Ron Dennis") && contadorPreguntas == 6)
+                if (editTextFundador.getText().toString().equals("Ron Dennis") && numeroCoche == 6)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1989") && contadorPreguntas == 6)
+                if (editTextFundacion.getText().toString().equals("1989") && numeroCoche == 6)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("P1") && contadorPreguntas == 6)
+                if (editTextModelo.getText().toString().equals("P1") && numeroCoche == 6)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1749,28 +1643,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //MORGAN
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Morgan") && contadorPreguntas == 7)
+                if (editTextMarca.getText().toString().equals("Morgan") && numeroCoche == 7)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("H.F.S. Morgan") && contadorPreguntas == 7)
+                if (editTextFundador.getText().toString().equals("H.F.S. Morgan") && numeroCoche == 7)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1910") && contadorPreguntas == 7)
+                if (editTextFundacion.getText().toString().equals("1910") && numeroCoche == 7)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Aero 8") && contadorPreguntas == 7)
+                if (editTextModelo.getText().toString().equals("Aero 8") && numeroCoche == 7)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1780,28 +1674,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //SUBARU
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Subaru") && contadorPreguntas == 8)
+                if (editTextMarca.getText().toString().equals("Subaru") && numeroCoche == 8)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Chikuhei Nakajima") && contadorPreguntas == 8)
+                if (editTextFundador.getText().toString().equals("Chikuhei Nakajima") && numeroCoche == 8)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("1953") && contadorPreguntas == 8)
+                if (editTextFundacion.getText().toString().equals("1953") && numeroCoche == 8)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("BRZ") && contadorPreguntas == 8)
+                if (editTextModelo.getText().toString().equals("BRZ") && numeroCoche == 8)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1811,28 +1705,28 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //TESLA
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Tesla") && contadorPreguntas == 9)
+                if (editTextMarca.getText().toString().equals("Tesla") && numeroCoche == 9)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Elon Musk") && contadorPreguntas == 9)
+                if (editTextFundador.getText().toString().equals("Elon Musk") && numeroCoche == 9)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundacion.getText().toString().equals("2003") && contadorPreguntas == 9)
+                if (editTextFundacion.getText().toString().equals("2003") && numeroCoche == 9)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Roadster") && contadorPreguntas == 9)
+                if (editTextModelo.getText().toString().equals("Roadster") && numeroCoche == 9)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1847,15 +1741,12 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Cuando entramos en el evento ponemos todos los elemento en blanco y reabilito los editText
-                editTextMarca.setBackgroundColor(Color.TRANSPARENT);
-                editTextFundador.setBackgroundColor(Color.TRANSPARENT);
-                editTextFundacion.setBackgroundColor(Color.TRANSPARENT);
-                editTextModelo.setBackgroundColor(Color.TRANSPARENT);
+                editTextMarca.setTextColor(Color.BLACK);
+                editTextFundador.setTextColor(Color.BLACK);
+                editTextFundacion.setTextColor(Color.BLACK);
+                editTextModelo.setTextColor(Color.BLACK);
 
-                editTextMarca.setEnabled(false);
-                editTextFundador.setEnabled(false);
-                editTextFundacion.setEnabled(false);
-                editTextModelo.setEnabled(false);
+
 
                 if (contadorPreguntas==10)
                 {

@@ -132,7 +132,8 @@
         android:layout_toEndOf="@+id/textViewFundacion"
         android:layout_marginLeft="6dp"
         android:layout_marginStart="6dp"
-        android:focusable="true" />
+        android:focusable="true"
+        style="@style/Widget.AppCompat.AutoCompleteTextView" />
 
     <EditText
         android:layout_width="wrap_content"
