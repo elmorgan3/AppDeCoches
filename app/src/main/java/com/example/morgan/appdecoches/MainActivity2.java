@@ -758,8 +758,8 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                     }
                 });
                 break;
-            }
         }
+    }
 
 
     //Este evento controlara los tres botones de comprobar, siguiente y salir
@@ -775,12 +775,12 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
             case R.id.buttonComprobar:
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche Bentley")("Walter Bentley")("1919")("Continental GT3-R");  0
-                if (editTextMarca.getText().toString().equals("Bentley") && numeroCoche == 0)
+                if (editTextMarca.getText().toString().equals("bentley") && numeroCoche == 0)
                 {
 
                     editTextMarca.setTextColor(Color.GREEN);
                 }
-                else if (!editTextMarca.getText().toString().equals("Bentley") && numeroCoche == 0)
+                else if (!editTextMarca.getText().toString().equals("bentley") && numeroCoche == 0)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -788,7 +788,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Walter Bentley") && numeroCoche == 0)
+                if (editTextFundador.getText().toString().equals("walter bentley") && numeroCoche == 0)
                 {
 
                     //El edit text para decir que es correcto
@@ -796,7 +796,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Walter Bentley") && numeroCoche == 0)
+                else if (!editTextFundador.getText().toString().equals("walter bentley") && numeroCoche == 0)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -819,7 +819,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Continental GT3-R") && numeroCoche == 0)
+                if (editTextModelo.getText().toString().equals("continental gt3-r") && numeroCoche == 0)
                 {
 
 
@@ -828,7 +828,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextModelo.getText().toString().equals("Continental GT3-R") && numeroCoche == 0)
+                else if (!editTextModelo.getText().toString().equals("continental gt3-r") && numeroCoche == 0)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -838,7 +838,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el segundo coche BUGATTI ("Bugatti")("Ettore Bugatti")("1909")("Chiron")   1
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Bugatti") && numeroCoche == 1)
+                if (editTextMarca.getText().toString().equals("bugatti") && numeroCoche == 1)
                 {
 
                     //El edit text para decir que es correcto
@@ -846,7 +846,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Bugatti") && numeroCoche == 1)
+                else if (!editTextMarca.getText().toString().equals("bugatti") && numeroCoche == 1)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -854,7 +854,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Ettore Bugatti") && numeroCoche == 1)
+                if (editTextFundador.getText().toString().equals("ettore bugatti") && numeroCoche == 1)
                 {
 
 
@@ -862,7 +862,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                     editTextFundador.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Ettore Bugatti") && numeroCoche == 1)
+                else if (!editTextFundador.getText().toString().equals("ettore bugatti") && numeroCoche == 1)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -885,14 +885,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Chiron") && numeroCoche == 1)
+                if (editTextModelo.getText().toString().equals("chiron") && numeroCoche == 1)
                 {
 
                     //El edit text para decir que es correcto
                     editTextModelo.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextModelo.getText().toString().equals("Chiron") && numeroCoche == 1)
+                else if (!editTextModelo.getText().toString().equals("chiron") && numeroCoche == 1)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -902,14 +902,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el tercer coche Cadillac");Henry Ford");1902.");Eldorado Brougham" numero 2
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Cadillac") && numeroCoche == 2)
+                if (editTextMarca.getText().toString().equals("cadillac") && numeroCoche == 2)
                 {
 
                     //El edit text para decir que es correcto
                     editTextMarca.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Cadillac") && numeroCoche == 2)
+                else if (!editTextMarca.getText().toString().equals("cadillac") && numeroCoche == 2)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -917,7 +917,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Henry Ford") && numeroCoche == 2)
+                if (editTextFundador.getText().toString().equals("henry ford") && numeroCoche == 2)
                 {
 
                     //El edit text para decir que es correcto
@@ -925,7 +925,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Henry Ford") && numeroCoche == 2)
+                else if (!editTextFundador.getText().toString().equals("henry ford") && numeroCoche == 2)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -948,7 +948,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Eldorado Brougham") && numeroCoche == 2)
+                if (editTextModelo.getText().toString().equals("eldorado brougham") && numeroCoche == 2)
                 {
 
                     //El edit text para decir que es correcto
@@ -956,7 +956,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextModelo.getText().toString().equals("Eldorado Brougham") && numeroCoche == 2)
+                else if (!editTextModelo.getText().toString().equals("eldorado brougham") && numeroCoche == 2)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -966,14 +966,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el cuarto coche ("Chevrolet")("Luis Chevrolet")("1911")("Camaro") numero 3
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Chevrolet") && numeroCoche == 3)
+                if (editTextMarca.getText().toString().equals("chevrolet") && numeroCoche == 3)
                 {
 
                     //El edit text para decir que es correcto
                     editTextMarca.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Chevrolet") && numeroCoche == 3)
+                else if (!editTextMarca.getText().toString().equals("chevrolet") && numeroCoche == 3)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -981,13 +981,13 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Luis Chevrolet") && numeroCoche == 3)
+                if (editTextFundador.getText().toString().equals("luis chevrolet") && numeroCoche == 3)
                 {
                     //El edit text para decir que es correcto
                     editTextFundador.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Luis Chevrolet") && numeroCoche == 3)
+                else if (!editTextFundador.getText().toString().equals("luis chevrolet") && numeroCoche == 3)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -1010,14 +1010,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Camaro") && numeroCoche == 3)
+                if (editTextModelo.getText().toString().equals("camaro") && numeroCoche == 3)
                 {
 
                     //El edit text para decir que es correcto
                     editTextModelo.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextModelo.getText().toString().equals("Camaro") && numeroCoche == 3)
+                else if (!editTextModelo.getText().toString().equals("camaro") && numeroCoche == 3)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -1027,14 +1027,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el quinto coche ("Dodge")("John Dodge")("1914")("Challenger") numero 4
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Dodge") && numeroCoche == 4)
+                if (editTextMarca.getText().toString().equals("dodge") && numeroCoche == 4)
                 {
                     //El edit text para decir que es correcto
                     editTextMarca.setTextColor(Color.GREEN);
 
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Dodge") && numeroCoche == 4)
+                else if (!editTextMarca.getText().toString().equals("dodge") && numeroCoche == 4)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -1042,7 +1042,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("John Dodge") && numeroCoche == 4)
+                if (editTextFundador.getText().toString().equals("john dodge") && numeroCoche == 4)
                 {
 
                     //El edit text para decir que es correcto
@@ -1050,7 +1050,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextFundador.getText().toString().equals("John Dodge") && numeroCoche == 4)
+                else if (!editTextFundador.getText().toString().equals("john dodge") && numeroCoche == 4)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -1074,7 +1074,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Challenger") && numeroCoche == 4)
+                if (editTextModelo.getText().toString().equals("challenger") && numeroCoche == 4)
                 {
 
                     //El edit text para decir que es correcto
@@ -1082,7 +1082,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextModelo.getText().toString().equals("Challenger") && numeroCoche == 4)
+                else if (!editTextModelo.getText().toString().equals("challenger") && numeroCoche == 4)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -1092,7 +1092,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el sexto coche ("Lexus")("Eiji Toyoda")("1989")("LFA")   numero 5
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Lexus") && numeroCoche == 5)
+                if (editTextMarca.getText().toString().equals("lexus") && numeroCoche == 5)
                 {
 
                     //El edit text para decir que es correcto
@@ -1100,7 +1100,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Lexus") && numeroCoche == 5)
+                else if (!editTextMarca.getText().toString().equals("lexus") && numeroCoche == 5)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -1108,7 +1108,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Eiji Toyoda") && numeroCoche == 5)
+                if (editTextFundador.getText().toString().equals("eiji toyoda") && numeroCoche == 5)
                 {
 
                     //El edit text para decir que es correcto
@@ -1116,7 +1116,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Eiji Toyoda") && numeroCoche == 5)
+                else if (!editTextFundador.getText().toString().equals("eiji toyoda") && numeroCoche == 5)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -1140,14 +1140,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("LFA") && numeroCoche == 5)
+                if (editTextModelo.getText().toString().equals("lfs") && numeroCoche == 5)
                 {
                     //El edit text para decir que es correcto
                     editTextModelo.setTextColor(Color.GREEN);
 
 
                 }
-                else if (!editTextModelo.getText().toString().equals("LFA") && numeroCoche == 5)
+                else if (!editTextModelo.getText().toString().equals("lfa") && numeroCoche == 5)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -1157,14 +1157,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el septimo coche ("McLaren")("Ron Dennis")("1989")("P1")   numero 6
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("McLaren") && numeroCoche == 6)
+                if (editTextMarca.getText().toString().equals("mclaren") && numeroCoche == 6)
                 {
                     //El edit text para decir que es correcto
                     editTextMarca.setTextColor(Color.GREEN);
 
 
                 }
-                else if (!editTextMarca.getText().toString().equals("McLaren") && numeroCoche == 6)
+                else if (!editTextMarca.getText().toString().equals("mclaren") && numeroCoche == 6)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -1172,7 +1172,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Ron Dennis") && numeroCoche == 6)
+                if (editTextFundador.getText().toString().equals("ron dennis") && numeroCoche == 6)
                 {
 
                     //El edit text para decir que es correcto
@@ -1180,7 +1180,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Ron Dennis") && numeroCoche == 6)
+                else if (!editTextFundador.getText().toString().equals("ron dennis") && numeroCoche == 6)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -1204,7 +1204,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("P1") && numeroCoche == 6)
+                if (editTextModelo.getText().toString().equals("p1") && numeroCoche == 6)
                 {
 
                     //El edit text para decir que es correcto
@@ -1212,7 +1212,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextModelo.getText().toString().equals("P1") && numeroCoche == 6)
+                else if (!editTextModelo.getText().toString().equals("p1") && numeroCoche == 6)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -1222,7 +1222,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el octabo coche ("Morgan")("H.F.S. Morgan")("1910")("Aero 8")   numero 7
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Morgan") && numeroCoche == 7)
+                if (editTextMarca.getText().toString().equals("morgan") && numeroCoche == 7)
                 {
 
                     //El edit text para decir que es correcto
@@ -1230,7 +1230,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Morgan") && numeroCoche == 7)
+                else if (!editTextMarca.getText().toString().equals("morgan") && numeroCoche == 7)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -1238,7 +1238,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("H.F.S. Morgan") && numeroCoche == 7)
+                if (editTextFundador.getText().toString().equals("h.f.s. morgan") && numeroCoche == 7)
                 {
 
                     //El edit text para decir que es correcto
@@ -1246,7 +1246,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextFundador.getText().toString().equals("H.F.S. Morgan") && numeroCoche == 7)
+                else if (!editTextFundador.getText().toString().equals("h.f.s. morgan") && numeroCoche == 7)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -1270,7 +1270,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Aero 8") && numeroCoche == 7)
+                if (editTextModelo.getText().toString().equals("aero 8") && numeroCoche == 7)
                 {
 
                     //El edit text para decir que es correcto
@@ -1278,7 +1278,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextModelo.getText().toString().equals("Aero 8") && numeroCoche == 7)
+                else if (!editTextModelo.getText().toString().equals("aero 8") && numeroCoche == 7)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -1288,7 +1288,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el noveno coche ("Subaru")("Chikuhei Nakajima")("1953")("BRZ")  numero 8
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Subaru") && numeroCoche == 8)
+                if (editTextMarca.getText().toString().equals("subaru") && numeroCoche == 8)
                 {
 
                     //El edit text para decir que es correcto
@@ -1296,7 +1296,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Subaru") && numeroCoche == 8)
+                else if (!editTextMarca.getText().toString().equals("subaru") && numeroCoche == 8)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -1304,7 +1304,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Chikuhei Nakajima") && numeroCoche == 8)
+                if (editTextFundador.getText().toString().equals("chikuhei nakajima") && numeroCoche == 8)
                 {
 
                     //El edit text para decir que es correcto
@@ -1312,7 +1312,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Chikuhei Nakajima") && numeroCoche == 8)
+                else if (!editTextFundador.getText().toString().equals("chikuhei nakajima") && numeroCoche == 8)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -1336,14 +1336,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("BRZ") && numeroCoche == 8)
+                if (editTextModelo.getText().toString().equals("brz") && numeroCoche == 8)
                 {
 
                     //El edit text para decir que es correcto
                     editTextModelo.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextModelo.getText().toString().equals("BRZ") && numeroCoche == 8)
+                else if (!editTextModelo.getText().toString().equals("brz") && numeroCoche == 8)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -1353,7 +1353,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //////////////Ahora compruebo el el decimo coche ("Tesla")("Elon Musk")("2003")("Roadster")  numero 9
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Tesla") && numeroCoche == 9)
+                if (editTextMarca.getText().toString().equals("tesla") && numeroCoche == 9)
                 {
 
                     //El edit text para decir que es correcto
@@ -1361,7 +1361,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextMarca.getText().toString().equals("Tesla") && numeroCoche == 9)
+                else if (!editTextMarca.getText().toString().equals("tesla") && numeroCoche == 9)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextMarca.setTextColor(Color.RED);
@@ -1369,14 +1369,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Elon Musk") && numeroCoche == 9)
+                if (editTextFundador.getText().toString().equals("elon musk") && numeroCoche == 9)
                 {
 
                     //El edit text para decir que es correcto
                     editTextFundador.setTextColor(Color.GREEN);
 
                 }
-                else if (!editTextFundador.getText().toString().equals("Elon Musk") && numeroCoche == 9)
+                else if (!editTextFundador.getText().toString().equals("elon musk") && numeroCoche == 9)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextFundador.setTextColor(Color.RED);
@@ -1400,7 +1400,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Roadster") && numeroCoche == 9)
+                if (editTextModelo.getText().toString().equals("roadster") && numeroCoche == 9)
                 {
 
                     //El edit text para decir que es correcto
@@ -1408,7 +1408,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
 
                 }
-                else if (!editTextModelo.getText().toString().equals("Roadster") && numeroCoche == 9)
+                else if (!editTextModelo.getText().toString().equals("roadster") && numeroCoche == 9)
                 {
                     //pongo el texto en rojo para decir que se a equivocado
                     editTextModelo.setTextColor(Color.RED);
@@ -1426,14 +1426,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //BENTLEY
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Bentley") && numeroCoche == 0)
+                if (editTextMarca.getText().toString().equals("bentley") && numeroCoche == 0)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Walter Bentley") && numeroCoche == 0)
+                if (editTextFundador.getText().toString().equals("walter bentley") && numeroCoche == 0)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1447,7 +1447,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Continental GT3-R") && numeroCoche == 0)
+                if (editTextModelo.getText().toString().equals("continental gt3-r") && numeroCoche == 0)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1457,14 +1457,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //BUGATTI
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Bugatti") && numeroCoche == 1)
+                if (editTextMarca.getText().toString().equals("bugatti") && numeroCoche == 1)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Ettore Bugatti") && numeroCoche == 1)
+                if (editTextFundador.getText().toString().equals("ettore bugatti") && numeroCoche == 1)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1478,7 +1478,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Chiron") && numeroCoche == 1)
+                if (editTextModelo.getText().toString().equals("chiron") && numeroCoche == 1)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1488,14 +1488,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //CADILLAC
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Cadillac") && numeroCoche == 2)
+                if (editTextMarca.getText().toString().equals("cadillac") && numeroCoche == 2)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Henry Ford") && numeroCoche == 2)
+                if (editTextFundador.getText().toString().equals("henry ford") && numeroCoche == 2)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1509,7 +1509,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Eldorado Brougham") && numeroCoche == 2)
+                if (editTextModelo.getText().toString().equals("eldorado brougham") && numeroCoche == 2)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1519,14 +1519,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //CHEVROLET
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Chevrolet") && numeroCoche == 3)
+                if (editTextMarca.getText().toString().equals("chevrolet") && numeroCoche == 3)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Luis Chevrolet") && numeroCoche == 3)
+                if (editTextFundador.getText().toString().equals("luis chevrolet") && numeroCoche == 3)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1540,7 +1540,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Camaro") && numeroCoche == 3)
+                if (editTextModelo.getText().toString().equals("camaro") && numeroCoche == 3)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1550,14 +1550,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //DODGE
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Dodge") && numeroCoche == 4)
+                if (editTextMarca.getText().toString().equals("dodge") && numeroCoche == 4)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("John Dodge") && numeroCoche == 4)
+                if (editTextFundador.getText().toString().equals("john dodge") && numeroCoche == 4)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1571,7 +1571,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Challenger") && numeroCoche == 4)
+                if (editTextModelo.getText().toString().equals("challenger") && numeroCoche == 4)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1581,14 +1581,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //LEXUS
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Lexus") && numeroCoche == 5)
+                if (editTextMarca.getText().toString().equals("lexus") && numeroCoche == 5)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Eiji Toyoda") && numeroCoche == 5)
+                if (editTextFundador.getText().toString().equals("eiji toyoda") && numeroCoche == 5)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1602,7 +1602,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("LFA") && numeroCoche == 5)
+                if (editTextModelo.getText().toString().equals("lfa") && numeroCoche == 5)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1612,14 +1612,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //MCLAREN
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("McLaren") && numeroCoche == 6)
+                if (editTextMarca.getText().toString().equals("mclaren") && numeroCoche == 6)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Ron Dennis") && numeroCoche == 6)
+                if (editTextFundador.getText().toString().equals("ron dennis") && numeroCoche == 6)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1633,7 +1633,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("P1") && numeroCoche == 6)
+                if (editTextModelo.getText().toString().equals("p1") && numeroCoche == 6)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1643,14 +1643,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //MORGAN
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Morgan") && numeroCoche == 7)
+                if (editTextMarca.getText().toString().equals("morgan") && numeroCoche == 7)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("H.F.S. Morgan") && numeroCoche == 7)
+                if (editTextFundador.getText().toString().equals("h.f.s. morgan") && numeroCoche == 7)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1664,7 +1664,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Aero 8") && numeroCoche == 7)
+                if (editTextModelo.getText().toString().equals("aero 8") && numeroCoche == 7)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1674,14 +1674,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //SUBARU
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Subaru") && numeroCoche == 8)
+                if (editTextMarca.getText().toString().equals("subaru") && numeroCoche == 8)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Chikuhei Nakajima") && numeroCoche == 8)
+                if (editTextFundador.getText().toString().equals("chikuhei nakajima") && numeroCoche == 8)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1695,7 +1695,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("BRZ") && numeroCoche == 8)
+                if (editTextModelo.getText().toString().equals("brz") && numeroCoche == 8)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1705,14 +1705,14 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
 
                 //TESLA
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextMarca.getText().toString().equals("Tesla") && numeroCoche == 9)
+                if (editTextMarca.getText().toString().equals("tesla") && numeroCoche == 9)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextFundador.getText().toString().equals("Elon Musk") && numeroCoche == 9)
+                if (editTextFundador.getText().toString().equals("elon musk") && numeroCoche == 9)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
@@ -1726,7 +1726,7 @@ public class MainActivity2 extends Activity implements View.OnClickListener {
                 }
 
                 //Comprueblo si lo que han escrito es correcto y coincide con el coche
-                if (editTextModelo.getText().toString().equals("Roadster") && numeroCoche == 9)
+                if (editTextModelo.getText().toString().equals("roadster") && numeroCoche == 9)
                 {
                     //Contamos un acierto
                     contadorAciertos++;
